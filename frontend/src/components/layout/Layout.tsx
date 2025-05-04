@@ -1,0 +1,18 @@
+// src/layout.tsx
+import React, { ReactNode, useState } from 'react';
+import Header from '@/components/layout/Header';
+
+type LayoutProps = {
+  children: ReactNode;
+};
+
+export default function Layout({ children }: LayoutProps) {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1 p-8">
+        {children}
+      </main>
+    </div>
+  );
+}

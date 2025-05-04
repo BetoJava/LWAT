@@ -1,12 +1,16 @@
-import { useState } from 'react'
+// src/App.tsx
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import HomePage from '@/pages/HomePage';
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
-  )
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
 }
-
-export default App
